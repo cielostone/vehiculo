@@ -6,7 +6,7 @@ Al final, muestra todo en un **resumen** y cierra la sesión.
 
 ---
 
-## 📌 Lo que hice (paso a paso)
+## Lo que hice (paso a paso)
 
 1) Abrí la **Terminal** en mi Mac.  
 2) Creé el archivo `SesionUsuarioVehiculo.java` y programé con `Scanner` para leer teclado.  
@@ -24,7 +24,7 @@ java SesionUsuarioVehiculo
 
 ---
 
-## ▶️ Ejecución principal
+## Ejecución principal
 ```bash
 cd src
 javac SesionUsuarioVehiculo.java
@@ -59,13 +59,13 @@ Sesión finalizada. ¡Gracias por usar el sistema, Cielo!
 
 ---
 
-## 📂 Estructura
+## Estructura
 ```
 .
 ├── README.md
 ├── .gitignore
 ├── src
-│   ├── SesionUsuarioVehiculo.java   # ✅ Programa oficial (principal)
+│   ├── SesionUsuarioVehiculo.java   # Programa oficial (principal)
 │   ├── Vehiculo.java                # Versión solo vehículo (referencia)
 │   └── DatosPersonales.java         # Versión solo usuario (referencia)
 └── docs
@@ -76,7 +76,7 @@ Sesión finalizada. ¡Gracias por usar el sistema, Cielo!
 
 ---
 
-## ✅ Requisitos cumplidos
+## Requisitos cumplidos
 - Código en **Java** que **pide datos por teclado** y **muestra resultados**.  
 - **Compilación y ejecución por consola** (sin IDE).  
 - **Documento** con teoría y paso a paso.  
