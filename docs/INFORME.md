@@ -66,6 +66,31 @@ Sesión finalizada. ¡Gracias por usar el sistema, Cielo!
 
 ---
 
+## Evidencias
+
+### Compilación
+![Compilación del programa](img/compilacion.png)
+
+### Ejecución
+![Ejecución del programa](img/ejecucion.png)
+
+### Estructura del proyecto
+![Estructura del proyecto](img/estructura-proyecto.png)
+
+### README en GitHub (vista 1)
+![Vista README GitHub 1](img/readme-github1.png)
+
+### README en GitHub (vista 2)
+![Vista README GitHub 2](img/readme-github2.png)
+
+### README en GitHub (vista 3)
+![Vista README GitHub 3](img/readme-github3.png)
+
+### Tablero Kanban en GitHub Projects
+![Tablero Kanban](img/tablero-github.png)
+
+---
+
 ## Conclusión
 El ejercicio me ayudó a comprender cómo funciona el proceso real de compilación en Java sin depender de un IDE.  
 También me permitió practicar el uso de `Scanner`, la importancia de limpiar el buffer entre `nextInt()` y `nextLine()`, y ver cómo un simple programa puede simular un flujo de usuario.  
