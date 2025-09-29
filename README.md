@@ -385,7 +385,7 @@ const monitorColdChain = () => {
 
 ---
 
-**📧 Desarrollado por:** Kervin | **🎓 Institución:** AIEP | **📚 Materia:** Taller de Logística
+**📧 Desarrollado por:** Cielo | **🎓 Institución:** AIEP | **📚 Materia:** Taller de Aplicaciones Móviles
 ```
 
 ### iOS
