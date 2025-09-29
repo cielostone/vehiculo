@@ -1,4 +1,4 @@
-# 📱 Taller de Logística - Aplicación Android
+# 📱 Taller de Aplicaciones Móviles
 
 > **Aplicación móvil profesional para gestión logística con monitoreo de cadena de frío y seguimiento GPS**
 
