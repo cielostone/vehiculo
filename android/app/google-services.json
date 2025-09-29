@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "860233189661",
+    "firebase_url": "https://aiep-project-default-rtdb.firebaseio.com",
+    "project_id": "aiep-project",
+    "storage_bucket": "aiep-project.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860233189661:android:fe6e18093e33b3f93e279f4",
+        "android_client_info": {
+          "package_name": "com.tallerlogisticaapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA1pniE856sA21vQLeFb7DEawKXE_RvLA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
