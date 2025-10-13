@@ -305,6 +305,83 @@ class FirebaseService {
   // === UTILIDADES ===
 
   /**
+   * Crear o actualizar datos en Firebase Realtime Database
+   */
+  async createData(path: string, id: string, data: any): Promise<void> {
+    try {
+      if (!this.currentUser) {
+        throw new Error('Usuario no autenticado');
+      }
+
+      await database().ref(`${path}/${id}`).set({
+        ...data,
+        userId: this.currentUser.uid,
+        updatedAt: database.ServerValue.TIMESTAMP,
+      });
+
+      console.log(`✅ Datos creados en ${path}/${id}`);
+    } catch (error: any) {
+      console.error(`❌ Error al crear datos en ${path}:`, error.message);
+      throw error;
+    }
+  }
+
+  /**
+   * Leer datos de Firebase Realtime Database
+   */
+  async readData(path: string): Promise<any> {
+    try {
+      if (!this.currentUser) {
+        throw new Error('Usuario no autenticado');
+      }
+
+      const snapshot = await database().ref(path).once('value');
+      return snapshot.val();
+    } catch (error: any) {
+      console.error(`❌ Error al leer datos de ${path}:`, error.message);
+      throw error;
+    }
+  }
+
+  /**
+   * Actualizar datos en Firebase Realtime Database
+   */
+  async updateData(path: string, data: any): Promise<void> {
+    try {
+      if (!this.currentUser) {
+        throw new Error('Usuario no autenticado');
+      }
+
+      await database().ref(path).update({
+        ...data,
+        updatedAt: database.ServerValue.TIMESTAMP,
+      });
+
+      console.log(`✅ Datos actualizados en ${path}`);
+    } catch (error: any) {
+      console.error(`❌ Error al actualizar datos en ${path}:`, error.message);
+      throw error;
+    }
+  }
+
+  /**
+   * Eliminar datos de Firebase Realtime Database
+   */
+  async deleteData(path: string): Promise<void> {
+    try {
+      if (!this.currentUser) {
+        throw new Error('Usuario no autenticado');
+      }
+
+      await database().ref(path).remove();
+      console.log(`✅ Datos eliminados de ${path}`);
+    } catch (error: any) {
+      console.error(`❌ Error al eliminar datos de ${path}:`, error.message);
+      throw error;
+    }
+  }
+
+  /**
    * Convertir códigos de error de Firebase a mensajes amigables
    */
   private getAuthErrorMessage(errorCode: string): string {

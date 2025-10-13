@@ -13,6 +13,15 @@ import ProfileScreen from '../screens/ProfileScreen';
 import DeliveryCalculatorScreen from '../screens/DeliveryCalculatorScreen';
 import GPSDistanceScreen from '../screens/GPSDistanceScreen';
 
+// Nuevas pantallas Actividad 07
+import InventoryAdvancedScreen from '../screens/InventoryAdvancedScreen';
+import VehicleManagementScreen from '../screens/VehicleManagementScreen';
+import RouteManagementScreen from '../screens/RouteManagementScreen';
+
+// Nuevas pantallas Actividad 08 - Monitoreo de Temperatura
+import TemperatureMonitorScreen from '../screens/TemperatureMonitorScreen';
+import TemperatureConfigScreen from '../screens/TemperatureConfigScreen';
+
 import { RootStackParamList } from '../types';
 
 const Tab = createBottomTabNavigator();
@@ -125,6 +134,35 @@ const AppNavigator = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={TabNavigator} />
+        
+        {/* Nuevas pantallas de Actividad 07 */}
+        <Stack.Screen 
+          name="InventoryAdvanced" 
+          component={InventoryAdvancedScreen}
+          options={{ headerShown: true, title: 'Inventario Avanzado' }}
+        />
+        <Stack.Screen 
+          name="VehicleManagement" 
+          component={VehicleManagementScreen}
+          options={{ headerShown: true, title: 'Gestión de Vehículos' }}
+        />
+        <Stack.Screen 
+          name="RouteManagement" 
+          component={RouteManagementScreen}
+          options={{ headerShown: true, title: 'Gestión de Rutas' }}
+        />
+        
+        {/* Nuevas pantallas de Actividad 08 - Monitoreo de Temperatura */}
+        <Stack.Screen 
+          name="TemperatureMonitor" 
+          component={TemperatureMonitorScreen}
+          options={{ headerShown: true, title: 'Monitor de Temperatura' }}
+        />
+        <Stack.Screen 
+          name="TemperatureConfig" 
+          component={TemperatureConfigScreen}
+          options={{ headerShown: true, title: 'Configuración de Temperatura' }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

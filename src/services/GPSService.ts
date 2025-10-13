@@ -15,6 +15,7 @@ export interface GPSCoordinates {
   heading?: number;
   speed?: number;
   timestamp?: number;
+  distanceToWarehouse?: number;
 }
 
 export interface LocationError {

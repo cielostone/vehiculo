@@ -15,8 +15,14 @@ const initialState: InventoryState = {
       category: 'Embalaje',
       quantity: 150,
       minStock: 50,
+      maxStock: 300,
       location: 'Almacén A-1',
       status: 'available',
+      expirationDate: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000), // 1 año
+      purchaseDate: new Date(),
+      supplier: 'Embalajes Chile Ltda.',
+      temperature: 20, // Temperatura ambiente
+      unit: 'units',
       lastUpdated: new Date(),
     },
     {
@@ -25,8 +31,14 @@ const initialState: InventoryState = {
       category: 'Documentación',
       quantity: 25,
       minStock: 100,
+      maxStock: 500,
       location: 'Almacén B-2',
       status: 'low_stock',
+      expirationDate: new Date(Date.now() + 730 * 24 * 60 * 60 * 1000), // 2 años
+      purchaseDate: new Date(),
+      supplier: 'Papelería Industrial S.A.',
+      temperature: 20,
+      unit: 'units',
       lastUpdated: new Date(),
     },
     {
@@ -35,8 +47,14 @@ const initialState: InventoryState = {
       category: 'Transporte',
       quantity: 0,
       minStock: 20,
+      maxStock: 100,
       location: 'Patio Exterior',
       status: 'out_of_stock',
+      expirationDate: new Date(Date.now() + 1825 * 24 * 60 * 60 * 1000), // 5 años
+      purchaseDate: new Date(),
+      supplier: 'Maderas del Sur SpA',
+      temperature: 15, // Temperatura exterior
+      unit: 'units',
       lastUpdated: new Date(),
     },
   ],

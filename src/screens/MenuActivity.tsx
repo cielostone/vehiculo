@@ -10,6 +10,7 @@ import {
   RefreshControl,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { useNavigation } from '@react-navigation/native';
 import FirebaseService, { type FirebaseUser } from '../services/FirebaseService';
 import GPSService from '../services/GPSService';
 
@@ -24,6 +25,7 @@ const MenuActivity: React.FC<MenuActivityProps> = ({
   onLogout, 
   onNavigateToDeliveryCalculator 
 }) => {
+  const navigation = useNavigation();
   const [isLoading, setIsLoading] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   const [userProfile, setUserProfile] = useState<any>(null);
@@ -273,6 +275,73 @@ const MenuActivity: React.FC<MenuActivityProps> = ({
               <Text style={styles.menuOptionTitle}>Reportes</Text>
               <Text style={styles.menuOptionSubtitle}>
                 Historial de entregas y análisis
+              </Text>
+            </View>
+          </View>
+          <Icon name="chevron-right" size={24} color="#666" />
+        </TouchableOpacity>
+
+        {/* Nuevas funcionalidades Actividad 7 */}
+        <TouchableOpacity 
+          style={styles.menuOption}
+          onPress={() => {
+            try {
+              navigation.navigate('InventoryAdvanced' as never);
+            } catch (error) {
+              Alert.alert('Navegación', 'Accediendo a Inventario Avanzado...');
+            }
+          }}
+        >
+          <View style={styles.menuOptionLeft}>
+            <Icon name="inventory" size={24} color="#4caf50" />
+            <View style={styles.menuOptionText}>
+              <Text style={styles.menuOptionTitle}>Inventario Avanzado</Text>
+              <Text style={styles.menuOptionSubtitle}>
+                Actividad 7: Gestión inteligente de stock
+              </Text>
+            </View>
+          </View>
+          <Icon name="chevron-right" size={24} color="#666" />
+        </TouchableOpacity>
+
+        <TouchableOpacity 
+          style={styles.menuOption}
+          onPress={() => {
+            try {
+              navigation.navigate('VehicleManagement' as never);
+            } catch (error) {
+              Alert.alert('Navegación', 'Accediendo a Gestión de Vehículos...');
+            }
+          }}
+        >
+          <View style={styles.menuOptionLeft}>
+            <Icon name="local-shipping" size={24} color="#2196F3" />
+            <View style={styles.menuOptionText}>
+              <Text style={styles.menuOptionTitle}>Gestión de Vehículos</Text>
+              <Text style={styles.menuOptionSubtitle}>
+                Actividad 7: Manejo de flota vehicular
+              </Text>
+            </View>
+          </View>
+          <Icon name="chevron-right" size={24} color="#666" />
+        </TouchableOpacity>
+
+        <TouchableOpacity 
+          style={styles.menuOption}
+          onPress={() => {
+            try {
+              navigation.navigate('RouteManagement' as never);
+            } catch (error) {
+              Alert.alert('Navegación', 'Accediendo a Optimización de Rutas...');
+            }
+          }}
+        >
+          <View style={styles.menuOptionLeft}>
+            <Icon name="route" size={24} color="#9c27b0" />
+            <View style={styles.menuOptionText}>
+              <Text style={styles.menuOptionTitle}>Optimización de Rutas</Text>
+              <Text style={styles.menuOptionSubtitle}>
+                Actividad 7: Planificación inteligente
               </Text>
             </View>
           </View>
