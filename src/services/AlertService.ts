@@ -1,4 +1,6 @@
-import { Alert, Vibration } from 'react-native';
+import { Alert } from 'react-native';
+// Vibration importación deshabilitada para evitar problemas de permisos
+// import { Alert, Vibration } from 'react-native';
 
 /**
  * Tipos de alertas disponibles
@@ -37,7 +39,7 @@ export class AlertService {
   constructor() {
     this.config = {
       enableSound: true,
-      enableVibration: true, // Habilitado para mostrar simulación
+      enableVibration: false, // Deshabilitado para evitar problemas de permisos
       vibrationPattern: [0, 1000, 500, 1000], // patrón de vibración por defecto
       alertInterval: 5 // 5 minutos entre alertas del mismo tipo
     };
@@ -236,10 +238,13 @@ export class AlertService {
 
   /**
    * Activa vibración según el patrón configurado
+   * Función deshabilitada para evitar problemas de permisos
    */
   private triggerVibration(): void {
     try {
-      Vibration.vibrate(this.config.vibrationPattern);
+      // Vibration.vibrate(this.config.vibrationPattern); // Deshabilitado
+      console.log('Vibración simulada - Función deshabilitada para evitar crashes');
+      this.showVibrationSimulationAlert();
     } catch (error) {
       console.error('Error activando vibración:', error);
       // Si no hay permisos de vibración, mostrar alerta simulada
@@ -308,10 +313,12 @@ export class AlertService {
 
   /**
    * Cancela todas las vibraciones activas
+   * Función deshabilitada para evitar problemas de permisos
    */
   public cancelVibration(): void {
     try {
-      Vibration.cancel();
+      // Vibration.cancel(); // Deshabilitado
+      console.log('Cancelación de vibración simulada - Función deshabilitada');
     } catch (error) {
       console.error('Error cancelando vibración:', error);
     }

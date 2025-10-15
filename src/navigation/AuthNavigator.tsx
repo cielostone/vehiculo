@@ -28,6 +28,9 @@ import RouteManagementScreen from '../screens/RouteManagementScreen';
 import TemperatureMonitorScreen from '../screens/TemperatureMonitorScreen';
 import TemperatureConfigScreen from '../screens/TemperatureConfigScreen';
 
+// Actividad Sumativa - Sistema de Distribución con Mapa
+import DeliveryMapScreen from '../screens/DeliveryMapScreen';
+
 // Services
 import FirebaseService, { type FirebaseUser } from '../services/FirebaseService';
 
@@ -68,6 +71,9 @@ const MainTabNavigator = ({ user, onLogout }: { user: FirebaseUser; onLogout: ()
               break;
             case 'TemperatureMonitor':
               iconName = 'thermostat';
+              break;
+            case 'DeliveryMap':
+              iconName = 'map';
               break;
             case 'Activities':
               iconName = 'assignment';
@@ -155,6 +161,16 @@ const MainTabNavigator = ({ user, onLogout }: { user: FirebaseUser; onLogout: ()
         options={{ 
           title: 'Temp',
           headerTitle: 'Monitor de Temperatura'
+        }} 
+      />
+
+      {/* Actividad Sumativa - Sistema de Distribución con Mapa */}
+      <Tab.Screen 
+        name="DeliveryMap" 
+        component={DeliveryMapScreen} 
+        options={{ 
+          title: 'Mapa',
+          headerTitle: 'Distribución de Alimentos'
         }} 
       />
 

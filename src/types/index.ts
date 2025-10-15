@@ -205,6 +205,9 @@ export type RootStackParamList = {
   TemperatureMonitor: undefined;
   TemperatureConfig: undefined;
   
+  // Actividad Sumativa - Sistema de Distribución
+  DeliveryMap: undefined;
+  
   // Detail Screens
   InventoryDetail: { itemId: string };
   ShipmentDetail: { shipmentId: string };
